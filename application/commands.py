@@ -3,6 +3,7 @@ from application import bot
 #import Launch, requests, json
 from Launch import *
 from RocketInfo import *
+from Roadster import *
 import requests, json
 
 
@@ -26,9 +27,18 @@ def nextLaunch(message):
 
 @bot.message_handler(commands=['rocket'])
 def nextLaunch(message):
-    r = requests.get('https://api.spacexdata.com/v3/rockets/roadster')
+    r = requests.get('https://api.spacexdata.com/v3/rockets/falcon9')
     pipo = json.loads(r.content)
 
     a = RocketInfo(pipo)
+
+    bot.send_message(message.chat.id, a.imprimir())
+
+@bot.message_handler(commands=['roadster'])
+def Roadster(message):
+    r = requests.get('https://api.spacexdata.com/v3/roadster')
+    pipo = json.loads(r.content)
+
+    a = Roadster(pipo)
 
     bot.send_message(message.chat.id, a.imprimir())
