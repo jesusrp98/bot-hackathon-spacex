@@ -20,13 +20,13 @@ class Launch:
         cadena += self.details + "\n"
         cadena += "Launched from " + self.launchpad + "\n"
         cadena += "Launched on " + self.getLaunchDate() + "\n"
- #       cadena += "Static fired on " + self.getStaticFireDate() + "\n"
+        cadena += "Static fired on " + self.getStaticFireDate() + "\n"
         cadena += "Launch success: " + ("Yes" if self.launchSuccess else "No") + "\n"
         cadena += self.video + "\n"
         return cadena
 
     def getLaunchDate(self):
-        return today.strftime("Hoy es %b %d, %Y")
+        return datetime.datetime.strptime(launchDate, "Hoy es %B %d, %Y")
     
     def getStaticFireDate(self):
-        return datetime(self.staticFireDate).strftime("%a, %d %b %Y %H:%M:%S")
+        return datetime.datetime.strptime(staticFireDate, "Hoy es %B %d, %Y")
