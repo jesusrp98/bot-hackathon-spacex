@@ -1,3 +1,4 @@
+# coding=utf-8
 class Roadster:
     def __init__(self, json):
         self.name = "Tesla Roadster"
@@ -22,13 +23,13 @@ class Roadster:
         cadena += "Mass: " + str(self.mass) + "\n"
         cadena += "Launched on: " + str(self.firstFlight) + "\n"
         cadena += "Orbit: " + str(self.orbit) + "\n"
-        cadena += "Apoapsis: " + str(self.apoapsis_au)  + " ua" + "\n"
-        cadena += "Periapsis: " + str(self.periapsis_au)  + " ua" + "\n"
+        cadena += "Apoapsis: " + str(self.apoapsis_au) + " ua" + "\n"
+        cadena += "Periapsis: " + str(self.periapsis_au) + " ua" + "\n"
         cadena += "Inclination: " + str(self.inclination)  + "ª" + "\n"
         cadena += "Longitude: " + str(self.longitude)  + "ª" + "\n"
         cadena += "Period: " + str(self.period)  + " days" + "\n"
         cadena += "Speed: " + str(self.speed)  + " km/h" + "\n"
         cadena += "Earth distance: " + str(self.earthDistance)  + " km" + "\n"
         cadena += "Mars distance: " + str(self.marsDistance)  + " km" + "\n"
-        cadena += photo
+        cadena += self.photo
         return cadena
