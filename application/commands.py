@@ -10,7 +10,7 @@ import requests, json
 
 @bot.message_handler(commands=['start'])
 def start(message):
-    bot.reply_to(message, 'Hello, ' + message.from_user.first_name)
+    bot.reply_to(message, 'Welcome, ' + message.from_user.first_name)
 
 
 @bot.message_handler(commands=['latest'])
@@ -49,3 +49,4 @@ def roadster(message):
     a = Roadster(pipo)
 
     bot.send_message(message.chat.id, a.imprimir())
+
