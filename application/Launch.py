@@ -1,6 +1,6 @@
 # coding=utf-8
 from Rocket import *
-from dateutil import parser
+import datetime
 
 class Launch:
     def __init__(self, json):
@@ -26,7 +26,7 @@ class Launch:
         return cadena
 
     def getLaunchDate(self):
-        return parser.parser(self.launchDate)
+        return today.strftime("Hoy es %b %d, %Y")
     
     def getStaticFireDate(self):
         return datetime(self.staticFireDate).strftime("%a, %d %b %Y %H:%M:%S")
