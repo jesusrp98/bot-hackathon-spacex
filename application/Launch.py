@@ -1,3 +1,4 @@
+# coding=utf-8
 from Rocket import *
 from datetime import datetime
 
