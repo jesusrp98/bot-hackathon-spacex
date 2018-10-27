@@ -19,13 +19,8 @@ class Launch:
         cadena += "#" + str(self.number) + " · "  + self.name + "\n"
         cadena += self.details + "\n"
         cadena += "Launched from " + self.launchpad + "\n"
-<<<<<<< HEAD
         cadena += "Launched on " + self.getLaunchDate() + "\n"
         cadena += "Static fired on " + self.getStaticFireDate() + "\n"
-=======
-        #cadena += "Launched on " + self.getLaunchDate() + "\n"
- #       cadena += "Static fired on " + self.getStaticFireDate() + "\n"
->>>>>>> 7a4d82f9d46d001ac9cc20666204632506e92b7e
         cadena += "Launch success: " + ("Yes" if self.launchSuccess else "No") + "\n"
         cadena += self.video + "\n"
         return cadena
