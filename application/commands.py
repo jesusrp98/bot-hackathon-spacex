@@ -26,7 +26,7 @@ def nextLaunch(message):
 
 @bot.message_handler(commands=['rocket'])
 def nextLaunch(message):
-    r = requests.get('https://api.spacexdata.com/v3/rockets/falcon9')
+    r = requests.get('https://api.spacexdata.com/v3/rockets/roadster')
     pipo = json.loads(r.content)
 
     a = RocketInfo(pipo)
