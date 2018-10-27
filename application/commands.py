@@ -1,5 +1,6 @@
 # coding=utf-8
 from application import bot
+from telebot import types
 #import Launch, requests, json
 from Launch import *
 from RocketInfo import *
@@ -12,15 +13,20 @@ def start(message):
     bot.reply_to(message, 'Hello, ' + message.from_user.first_name)
 
 
-@bot.message_handler(commands=['next'])
+@bot.message_handler(commands=['latest'])
 def nextLaunch(message):
-    #a = Launch(json.load(urlopen('https://api.spacexdata.com/v3/launches/next')))
     r = requests.get('https://api.spacexdata.com/v3/launches/latest')
     pipo = json.loads(r.content)
 
+    a = Launch(pipo)
 
-    #print(pipo['flight_number'])
-    #print(json.loads(r.content.encode('utf-8')))
+    bot.reply_to(message, a.imprimir())
+
+@bot.message_handler(commands=['next'])
+def nextLaunch(message):
+    r = requests.get('https://api.spacexdata.com/v3/launches/next')
+    pipo = json.loads(r.content)
+
     a = Launch(pipo)
 
     bot.reply_to(message, a.imprimir())
