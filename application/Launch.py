@@ -1,6 +1,6 @@
 # coding=utf-8
 from Rocket import *
-from datetime import datetime
+from dateutil import parser
 
 class Launch:
     def __init__(self, json):
@@ -19,14 +19,14 @@ class Launch:
         cadena += "#" + str(self.number) + " · "  + self.name + "\n"
         cadena += self.details + "\n"
         cadena += "Launched from " + self.launchpad + "\n"
-#        cadena += "Launched on " + self.getLaunchDate() + "\n"
+        cadena += "Launched on " + self.getLaunchDate() + "\n"
  #       cadena += "Static fired on " + self.getStaticFireDate() + "\n"
         cadena += "Launch success: " + ("Yes" if self.launchSuccess else "No") + "\n"
         cadena += self.video + "\n"
         return cadena
 
     def getLaunchDate(self):
-        return datetime(self.launchDate).strftime("%a, %d %b %Y %H:%M:%S")
+        return parser.parser(self.launchDate)
     
     def getStaticFireDate(self):
         return datetime(self.staticFireDate).strftime("%a, %d %b %Y %H:%M:%S")
