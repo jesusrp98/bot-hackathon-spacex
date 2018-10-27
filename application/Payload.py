@@ -1,5 +1,5 @@
 class Payload:
-    def__init__(self,json):
+    def __init__(self,json):
         self.id=json['payload_id']
         self.capsuleSerial = json['capsuleSerial']
         self.customer = json['customers']

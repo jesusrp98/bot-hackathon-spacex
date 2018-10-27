@@ -1,4 +1,5 @@
 # coding=utf-8
+import Core, Fairings
 
 class Rocket:
     def __init__(self, json_info):

@@ -1,12 +1,13 @@
 import Payload
 
 class SecondStage:
-    def __init__(def, json):
+    def __init__(self, json):
         self.block = json['block']
-        self.payload = createPyaload(json)
+        self.payload = createPayload(json)
     
-    def createPyaload(json):
+    def createPayload(json):
         list = []
         for payload in json:
             list.append(Payload(payload))
+
         return list
