@@ -3,6 +3,7 @@ import Rocket
 
 class Launch:
     def __init__(self, json):
+        self.a=1
         #self.number = json['flight_number']
         self.name = json['mission_name']
         #self.launchpadId = json['launch_site']['site_id']
@@ -15,3 +16,6 @@ class Launch:
         #self.staticFireDate = json['static_fire_date_utc']
         #self.launchSuccess = json['launch_success']
         #self.rocket = Rocket(json['rocket'])
+
+    def prueba(self, json):
+        print(json)

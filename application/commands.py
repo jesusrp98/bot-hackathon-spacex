@@ -1,6 +1,9 @@
 # coding=utf-8
 from application import bot
-import Launch, requests, json
+#import Launch, requests, json
+from Launch import *
+import requests, json
+
 
 @bot.message_handler(commands=['start'])
 def start(message):
@@ -14,8 +17,8 @@ def nextLaunch(message):
     pipo = json.loads(r.content)
 
 
-    print(pipo['flight_number'])
+    #print(pipo['flight_number'])
     #print(json.loads(r.content.encode('utf-8')))
     a = Launch(pipo)
 
-    #bot.reply_to(message, a.name)
+    bot.reply_to(message, a.name)

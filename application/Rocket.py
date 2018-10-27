@@ -6,7 +6,7 @@ class Rocket:
         self.id = json_info['rocket_id']
         self.name = json_info['rocket_name']
         self.type = json_info['rocket_type']
-        self.firstStage = Cores(json_info['first_stage']['cores'])
+        self.firstStage = self.Cores(json_info['first_stage']['cores'])
         self.secondStage = secondStage(json_info['secondStage'])
         self.fairing = Fairings(json_info['fairings'])
 
