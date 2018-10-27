@@ -11,5 +11,5 @@ class Fairings:
         cadena += "Fairing reused: " + ("Yes" if self.reused else "No") + "\n"
         cadena += "Recovery attempt: " + ("Yes" if self.recovery_attempt else "No") + "\n"
         cadena += "Fairing recovered: " + ("Yes" if self.recovered else "No") + "\n"
-        cadena += "Ship: " + self.ship + "\n"
+        #cadena += "Ship: " + self.ship + "\n"
         return cadena

@@ -21,8 +21,8 @@ class Rocket:
         cadena = ""
         cadena += "--------------------" + "\n"
         cadena += "Rocket name: " + self.name + "\n"
-        for core in firstState
+        for core in self.firstStage:
             cadena += core.imprimir()
-        cadena += secondStage.imprimir()
-        cadena += fairing.imprimir()
+        cadena += self.secondStage.imprimir()
+        cadena += self.fairing.imprimir()
         return cadena

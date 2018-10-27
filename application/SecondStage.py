@@ -15,6 +15,6 @@ class SecondStage:
         cadena = ""
         cadena += "--------------------" + "\n"
         cadena += "Block: " + str(self.block) + "\n"
-        for payload in payloads
+        for payload in self.payloads:
             cadena += payload.imprimir()
         return cadena

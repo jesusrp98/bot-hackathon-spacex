@@ -10,7 +10,7 @@ class Payload:
     def imprimir(self):
         cadena = ""
         cadena += "--------------------" + "\n"
-        cadena += "Payload: " + self.payload_id + "\n"
+        cadena += "Payload: " + self.id + "\n"
         cadena += "Customer: " + self.customer + "\n"
         cadena += "Nationality: " + self.nationality + "\n"
         cadena += "Orbit: " + self.orbit + "\n"

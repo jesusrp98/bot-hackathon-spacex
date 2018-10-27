@@ -14,16 +14,16 @@ class Launch:
         self.launchSuccess = json['launch_success']
         self.rocket = Rocket(json['rocket'])
 
-    def prueba(self):
+    def imprimir(self):
         cadena = ""
         cadena += "#" + str(self.number) + " · "  + self.name + "\n"
         cadena += self.details + "\n"
         cadena += "Launched from " + self.launchpad + "\n"
-        cadena += "Launched on " + self.getLaunchDate() + "\n"
-        cadena += "Static fired on " + self.getStaticFireDate() + "\n"
+        #cadena += "Launched on " + self.getLaunchDate() + "\n"
+        #cadena += "Static fired on " + self.getStaticFireDate() + "\n"
         cadena += "Launch success: " + ("Yes" if self.launchSuccess else "No") + "\n"
         cadena += self.video + "\n"
-        cadena += rocket.imprimir()
+        cadena += self.rocket.imprimir().encode('utf-8')
         return cadena
 
     def getLaunchDate(self):

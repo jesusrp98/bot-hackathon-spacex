@@ -23,7 +23,7 @@ def nextLaunch(message):
     #print(json.loads(r.content.encode('utf-8')))
     a = Launch(pipo)
 
-    bot.reply_to(message, a.prueba())
+    bot.reply_to(message, a.imprimir())
 
 @bot.message_handler(commands=['rocket'])
 def nextLaunch(message):
