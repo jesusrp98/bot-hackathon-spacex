@@ -13,7 +13,7 @@ def start(message):
 @bot.message_handler(commands=['next'])
 def nextLaunch(message):
     #a = Launch(json.load(urlopen('https://api.spacexdata.com/v3/launches/next')))
-    r = requests.get('https://api.spacexdata.com/v3/launches/next')
+    r = requests.get('https://api.spacexdata.com/v3/launches/latest')
     pipo = json.loads(r.content)
 
 
@@ -22,4 +22,4 @@ def nextLaunch(message):
     a = Launch(pipo)
     a.prueba()
 
-    bot.reply_to(message, a.name)
+    #bot.reply_to(message, a.name)

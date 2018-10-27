@@ -3,7 +3,7 @@ from Payload import *
 class SecondStage:
     def __init__(self, json):
         self.block = json['block']
-        self.payload = self.createPayload(json)
+        self.payload = self.createPayload(json['payloads'])
     
     def createPayload(self, json):
         list = []

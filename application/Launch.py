@@ -4,7 +4,7 @@ from Rocket import *
 class Launch:
     def __init__(self, json):
         self.number = json['flight_number']
-        self.name = json['mission_name']
+        self.name = json['mission_name'].encode('utf-8')
         self.launchpadId = json['launch_site']['site_id']
         self.launchpadName = json['launch_site']['site_name']
         self.imageUrl = json['links']['mission_patch_small']
