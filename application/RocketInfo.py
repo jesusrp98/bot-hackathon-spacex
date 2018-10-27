@@ -1,4 +1,4 @@
-class RocetInfo:
+class RocketInfo:
     def __init__(self, json):
         self.id = json['rocket_id']
         self.name = json['rocket_name']
@@ -19,18 +19,18 @@ class RocetInfo:
 
     def imprimir(self):
         cadena = ""
-        cadena += "Name: " + self.name
-        cadena += self.description
-        cadena += "Hegiht: " + str(self.height) + "m"
-        cadena += "Diameter: " + str(self.diameter) + "m"
-        cadena += "Mass: " + str(self.mass) + "kg"
-        cadena += "In active: " + (self.active ? "Yes" : "No")
-        cadena += "Reusable: " + (self.reusable ? "Yes" : "No")
-        cadena += "Stages: " + self.stages
-        cadena += "Launch cost: $" + self.launchCost
-        cadena += "Success rate: " + self.success_rate_pct + "%"
-        cadena += "Engine: " + self.engine
-        cadena += "Fuel: " + self.fuel
-        cadena += "Oxidizer: " + self.oxidizer
-        cadena += photo
+        cadena += "Name: " + self.name + "\n"
+        cadena += self.description + "\n"
+        cadena += "Hegiht: " + str(self.height) + "m" + "\n"
+        cadena += "Diameter: " + str(self.diameter) + "m" + "\n"
+        cadena += "Mass: " + str(self.mass) + "kg" + "\n"
+        cadena += "In active: " + "yes" if self.active else "No" + "\n"
+        cadena += "Reusable: " + "yes" if self.reusable else "No" + "\n"
+        cadena += "Stages: " + str(self.stages) + "\n"
+        cadena += "Launch cost: $" + str(self.launchCost) + "\n"
+        cadena += "Success rate: " + str(self.successRate) + "%" + "\n"
+        cadena += "Engine: " + self.engine + "\n"
+        cadena += "Fuel: " + self.fuel + "\n"
+        cadena += "Oxidizer: " + self.oxidizer + "\n"
+        cadena += self.photo + "\n"
         return cadena
