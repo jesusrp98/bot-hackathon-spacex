@@ -23,6 +23,7 @@ class Launch:
         cadena += "Static fired on " + self.getStaticFireDate() + "\n"
         cadena += "Launch success: " + ("Yes" if self.launchSuccess else "No") + "\n"
         cadena += self.video + "\n"
+        cadena += rocket.imprimir()
         return cadena
 
     def getLaunchDate(self):
