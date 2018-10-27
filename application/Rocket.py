@@ -23,6 +23,6 @@ class Rocket:
         cadena += "Rocket name: " + self.name + "\n"
         for core in self.firstStage:
             cadena += core.imprimir()
-        cadena += self.secondStage.imprimir()
         cadena += self.fairing.imprimir()
+        cadena += self.secondStage.imprimir()
         return cadena

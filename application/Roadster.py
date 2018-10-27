@@ -9,9 +9,6 @@ class Roadster:
         self.orbit = json['orbit_type']
         self.apoapsis = json['apoapsis_au']
         self.periapsis = json['periapsis_au']
-        self.inclination = json['inclination']
-        self.longitude = json['longitude']
-        self.period = json['period_days']
         self.speed = json['speed_kph']
         self.earthDistance = json['earth_distance_km']
         self.marsDistance = json['mars_distance_km']
@@ -25,9 +22,6 @@ class Roadster:
         cadena += "Orbit: " + str(self.orbit) + "\n"
         cadena += "Apoapsis: " + str(self.apoapsis) + " ua" + "\n"
         cadena += "Periapsis: " + str(self.periapsis) + " ua" + "\n"
-        #cadena += "Inclination: " + str(self.inclination) + "ª" + "\n"
-        #cadena += "Longitude: " + str(self.longitude) + "ª" + "\n"
-        #cadena += "Period: " + str(self.period) + " days" + "\n"
         cadena += "Speed: " + str(self.speed) + " km/h" + "\n"
         cadena += "Earth distance: " + str(self.earthDistance)  + " km" + "\n"
         cadena += "Mars distance: " + str(self.marsDistance)  + " km" + "\n"

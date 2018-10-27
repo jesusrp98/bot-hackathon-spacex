@@ -14,7 +14,7 @@ class SecondStage:
     def imprimir(self):
         cadena = ""
         cadena += "--------------------" + "\n"
-        cadena += "Block: " + str(self.block) + "\n"
+        cadena += "Second stage block: " + str(self.block) + "\n"
         for payload in self.payloads:
             cadena += payload.imprimir()
         return cadena
