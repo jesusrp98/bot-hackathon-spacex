@@ -26,7 +26,7 @@ class Launch:
         return cadena
 
     def getLaunchDate(self):
-        return datetime.datetime.strptime(launchDate, "Hoy es %B %d, %Y")
+        return datetime.datetime.strptime(self.launchDate, "Hoy es %B %d, %Y")
     
     def getStaticFireDate(self):
-        return datetime.datetime.strptime(staticFireDate, "Hoy es %B %d, %Y")
+        return datetime.datetime.strptime(self.staticFireDate, "Hoy es %B %d, %Y")

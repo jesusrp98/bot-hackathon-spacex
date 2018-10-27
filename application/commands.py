@@ -35,8 +35,9 @@ def nextLaunch(message):
     bot.send_message(message.chat.id, a.imprimir())
 
 @bot.message_handler(commands=['roadster'])
-def Roadster(message):
+def roadster(message):
     r = requests.get('https://api.spacexdata.com/v3/roadster')
+    print(r.status_code)
     pipo = json.loads(r.content)
 
     a = Roadster(pipo)
