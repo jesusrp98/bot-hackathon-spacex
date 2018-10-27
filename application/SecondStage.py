@@ -9,5 +9,4 @@ class SecondStage:
         list = []
         for payload in json:
             list.append(Payload(payload))
-
         return list
