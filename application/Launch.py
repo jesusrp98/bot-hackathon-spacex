@@ -17,15 +17,32 @@ class Launch:
         self.rocket = Rocket(json['rocket'])
 
     def prueba(self):
-        print(self.number)
-        print(self.name)
-        print(self.launchpadId)
-        print(self.launchpadName)
-        print(self.imageUrl)
-        print(self.details)
-        print(self.tentativePrecision)
-        print(self.video)
-        print(self.launchDate)
-        print(self.staticFireDate)
-        print(self.launchSuccess)
-        print(self.rocket)
+        cadena=""
+        cadena = cadena + "Number: " + str(self.number) + "\n"
+        #print(self.number)
+        cadena = cadena + "Name: " + self.name + "\n"
+        #print(self.name)
+        cadena = cadena + "LaunchpadId: " + self.launchpadId + "\n"
+        #print(self.launchpadId)
+        cadena = cadena + "launchpadName: " + self.launchpadName + "\n"
+        #print(self.launchpadName)
+        #print(self.imageUrl)
+        cadena = cadena + "details: " + self.details + "\n"
+        #print(self.details)
+        cadena = cadena + "tentativePrecision: " + self.tentativePrecision + "\n"
+        #print(self.tentativePrecision)
+        #print(self.video)
+        cadena = cadena + "launchDate: " + self.launchDate + "\n"
+        #print(self.launchDate)
+        cadena = cadena + "staticFireDate: " + self.staticFireDate + "\n"
+        #print(self.staticFireDate)
+        if self.launchSuccess==True:
+            cadena = cadena + "launchSuccess: " + "Yes" + "\n"
+        else:
+            cadena = cadena + "launchSuccess: " + "No" + "\n"
+        cadena = cadena + self.video + "\n"
+        #print(self.launchSuccess)
+        #cadena = cadena + "rocket: " + self.rocket + "\n"
+        #print(self.rocket)
+
+        return cadena
