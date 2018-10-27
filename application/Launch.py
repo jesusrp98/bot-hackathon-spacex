@@ -10,7 +10,7 @@ class Launch:
         self.details = json['details']
         self.tentativePrecision = json['tentative_max_precision']
         self.video = json['links']['video_link']
-        self.launchDate = json['']
-        self.staticFireDate = json['']
-        self.launchSuccess = json['']
+        self.launchDate = json['launch_date_local']
+        self.staticFireDate = json['static_fire_date_utc']
+        self.launchSuccess = json['launch_success']
         self.rocket = Rocket(json['rocket'])
