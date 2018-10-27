@@ -20,5 +20,6 @@ def nextLaunch(message):
     #print(pipo['flight_number'])
     #print(json.loads(r.content.encode('utf-8')))
     a = Launch(pipo)
+    a.prueba()
 
     bot.reply_to(message, a.name)
